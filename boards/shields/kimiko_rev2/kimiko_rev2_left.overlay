@@ -1,0 +1,16 @@
+#include "kimiko_rev2.dtsi"
+
+&kscan0 {
+    col-gpios
+        = <&pro_micro 19 GPIO_ACTIVE_HIGH> // Col 0 from PCB
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH> // Col 1 from PCB
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH> // Col 2 from PCB
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH> // Col 3 from PCB
+        , <&pro_micro 16 GPIO_ACTIVE_HIGH> // Col 4 from PCB
+        , <&pro_micro 10 GPIO_ACTIVE_HIGH> // Col 5 from PCB
+        ;
+};
+
+&left_encoder {
+    status = "okay";
+};
