@@ -1,0 +1,18 @@
+// This file was generated from a template. Edit it to match your keyboard.
+// See https://zmk.dev/docs/development/hardware-integration/new-shield for more
+// instructions.
+
+#include "kimiko_rev2.dtsi"
+
+&kscan {
+    // Replace these comments with the GPIO pins in the matrix for the left side.
+    // See https://zmk.dev/docs/development/hardware-integration/new-shield#shield-overlays
+    col-gpios
+        = <&gpio0 29 GPIO_ACTIVE_HIGH> // Col 0 from PCB
+        , <&gpio0  2 GPIO_ACTIVE_HIGH> // Col 1 from PCB
+        , <&gpio1 13 GPIO_ACTIVE_HIGH> // Col 2 from PCB
+        , <&gpio0  3 GPIO_ACTIVE_HIGH> // Col 3 from PCB
+        , <&gpio0 28 GPIO_ACTIVE_HIGH> // Col 4 from PCB
+        , <&gpio1 11 GPIO_ACTIVE_HIGH> // Col 5 from PCB
+        ;
+};
