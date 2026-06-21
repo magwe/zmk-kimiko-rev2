@@ -25,7 +25,7 @@
         square_layer {
             display-name = "Secondary Layer";
 			bindings = <
-				 &trans         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans           &trans                                                                             &kp SLASH     &kp N7        &kp N8        &kp N9        &none           &trans
+				 &trans         &trans          &trans     &trans          &trans           &trans                                                                             &kp SLASH     &kp N7        &kp N8        &kp N9        &none           &trans
 				 &trans         &none           &none      &none           &none           &none                                                                             &mt CARET ASTRK &kp N4      &kp N5        &kp N6        &none           &trans
 				 &trans         &none           &none      &none           &none           &none                                                                             &kp MINUS     &kp N1        &kp N2        &kp N3        &none           &none
 				 &none          &none           &none      &none           &none           &none           &none           &trans                     &trans           &kp EQUAL     &kp PLUS      &kp N0        &trans           &trans           &trans           &trans
