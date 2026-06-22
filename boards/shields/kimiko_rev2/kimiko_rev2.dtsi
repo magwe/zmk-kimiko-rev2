@@ -25,13 +25,14 @@
 
         // Replace these comments with the GPIO pins in the matrix.
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#shield-overlays
-        row-gpios = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 0 from PCB
-                  , <&gpio0 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 1 from PCB
-                  , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 2 from PCB
-                  , <&gpio0  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 3 from PCB
-                  , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 4 from PCB
-                  , <&gpio1  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 5 from PCB
-                ;
+        row-gpios
+            = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // D4 (Rad 0)
+            , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // C6 (Rad 1)
+            , <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // D7 (Rad 2)
+            , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // E6 (Rad 3)
+            , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // B4 (Rad 4)
+            , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // B5 (Rad 5)
+            ;
     };
 
     default_transform: default_transform {
