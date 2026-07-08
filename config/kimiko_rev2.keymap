@@ -7,71 +7,62 @@
 / {
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "Default Layer";
-			bindings = <
-				 &kp ESC        &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                                                                          &kp N6        &kp N7        &kp N8        &kp N9        &kp N0        &kp MINUS
-				 &kp TAB        &kp Q         &kp W         &kp E         &kp R         &kp T                                                                           &kp Y         &kp U         &kp I         &kp O         &kp P         &kp LBKT
-				 &kp TILDE      &kp A         &kp S         &kp D         &kp F         &kp G                                                                           &kp H         &kp J         &kp K         &kp L         &kp SEMICOLON  &kp SQT
-				 &kp LSHFT      &kp Z         &kp X         &kp C         &kp V         &kp B         &none         &kp UP                 &kp LEFT      &none          &kp N         &kp M         &kp COMMA     &kp DOT       &kp SLASH     &kp RET
-				                                            &studio_unlock  &kp LCMD    &mo 1         &kp SPACE     &kp DOWN               &kp RIGHT     &kp RET        &mo 2         &kp RALT      &kp ENTER
+            bindings = <
+&kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LBKT  &kp TILDE  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp SQT  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp LEFT_GUI  &kp LEFT_ALT  &kp RALT  &mo 5  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &mt RSHIFT ENTER  &studio_unlock  &mo 3  &mo 1  &kp SPACE  &kp LCTRL  &kp RETURN  &kp BACKSPACE  &mo 2  &mo 4  &mo 5
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
-        
+
         square_layer {
             display-name = "Secondary Layer";
-			bindings = <
-				 &trans         &trans          &trans     &trans          &trans           &trans                                                                             &kp SLASH     &kp N7        &kp N8        &kp N9        &none           &trans
-				 &trans         &none           &none      &none           &none           &none                                                                             &mt CARET ASTRK &kp N4      &kp N5        &kp N6        &none           &trans
-				 &trans         &none           &none      &none           &none           &none                                                                             &kp MINUS     &kp N1        &kp N2        &kp N3        &none           &none
-				 &none          &none           &none      &none           &none           &none           &none           &trans                     &trans           &kp EQUAL     &kp PLUS      &kp N0        &trans           &trans           &trans           &trans
-				                                           &trans    &trans           &trans           &trans           &trans                     &trans           &trans           &trans           &trans           &trans
-			>;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-		};
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &kp SLASH  &kp N7  &kp N8  &kp N9  &none  &trans  &trans  &none  &none  &none  &none  &none  &mt CARET ASTRK  &kp N4  &kp N5  &kp N6  &none  &trans  &trans  &none  &none  &none  &none  &none  &kp MINUS  &kp N1  &kp N2  &kp N3  &none  &none  &none  &none  &none  &none  &none  &none  &none  &trans  &trans  &kp EQUAL  &kp PLUS  &kp N0  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
 
-		triangle_layer {
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        triangle_layer {
             display-name = "Third Layer";
-			bindings = <
-				 &trans           &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT                                                                       &mt CARET ASTRK &kp AMPS    &kp LBKT      &kp RBKT      &none           &trans
-				 &trans           &trans           &trans           &trans           &trans           &trans                                                                             &none           &none           &kp LBRC      &kp RBRC      &none           &trans
-				 &trans           &trans           &trans           &trans           &trans           &trans                                                                             &none           &none           &kp LPAR      &kp RPAR      &none           &mt TILDE GRAVE
-				 &none           &trans           &trans           &trans           &trans           &trans           &trans           &trans                     &trans           &kp EQUAL     &kp UNDER     &none           &kp LT        &kp GT        &mt PIPE BSLH &trans
-				                                           &none           &trans           &trans           &trans           &trans                     &trans           &trans           &trans           &trans           &trans
-			>;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-		};
+            bindings = <
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &mt CARET ASTRK  &kp AMPS  &kp LBKT  &kp RBKT  &none  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &none  &none  &kp LBRC  &kp RBRC  &none  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &none  &none  &kp LPAR  &kp RPAR  &none  &mt TILDE GRAVE  &none  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp EQUAL  &kp UNDER  &none  &kp LT  &kp GT  &mt PIPE BSLH  &trans  &none  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
 
-		arrow_layer {
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        arrow_layer {
             display-name = "Forth Layer";
-			bindings = <
-				 &trans           &none           &none           &none           &none           &none                                                                             &none           &none           &none           &none           &none           &trans
-				 &trans           &none           &none           &none           &none           &none                                                                             &mt C_PP C_NEXT &kp HOME    &none           &kp END       &none           &trans
-				 &trans           &none           &none           &none           &none           &none                                                                             &kp C_VOL_UP  &kp LA(LEFT)  &kp UP        &kp LA(RIGHT) &none           &none
-				 &none           &none           &none           &none           &none           &none           &none           &trans                     &trans           &none           &mt C_MUTE C_VOL_DN &kp LEFT &kp DOWN     &kp RIGHT     &none           &trans
-				                                           &none           &trans           &trans           &trans           &trans                     &trans           &trans           &trans           &trans           &trans
-			>;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-		};
+            bindings = <
+&trans  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &trans  &trans  &none  &none  &none  &none  &none  &mt C_PP C_NEXT  &kp HOME  &none  &kp END  &none  &trans  &trans  &none  &none  &none  &none  &none  &kp C_VOL_UP  &kp LA(LEFT)  &kp UP  &kp LA(RIGHT)  &none  &none  &none  &none  &none  &none  &none  &none  &none  &trans  &trans  &none  &mt C_MUTE C_VOL_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &trans  &none  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
 
-		function_layer {
-            display-name = "Fifth Layer";
-			bindings = <
-				 &trans           &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                                                          &kp F6        &kp F7        &kp F8        &kp F9        &kp F10       &trans
-				 &trans           &trans           &trans           &trans           &trans           &trans                                                                             &trans           &trans           &trans           &trans           &trans           &trans
-				 &trans           &trans           &trans           &trans           &trans           &trans                                                                             &trans           &trans           &trans           &trans           &trans           &trans
-				 &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans                     &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
-				                                           &trans           &trans           &trans           &trans           &trans                     &trans           &trans           &trans           &trans           &trans
-			>;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-		};
+        };
+
+        function_layer {
+            display-name = "Fifth Layer";
+            bindings = <
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
     };
 };
-
 
 /*
 
