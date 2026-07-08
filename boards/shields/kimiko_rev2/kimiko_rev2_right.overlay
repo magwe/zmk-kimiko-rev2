@@ -21,3 +21,7 @@
         , <&pro_micro 19 GPIO_ACTIVE_HIGH> // F7 (COL0)
         ;
 };
+
+&rotary_encoder {
+    status = "okay";
+};

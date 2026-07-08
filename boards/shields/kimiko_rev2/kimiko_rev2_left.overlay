@@ -17,3 +17,7 @@
 
         ;
 };
+
+&rotary_encoder {
+    status = "okay";
+};
