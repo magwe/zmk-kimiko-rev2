@@ -26,6 +26,5 @@ include:
   - board: nice_nano_v2
     shield: kimiko_rev2_right
   - board: nice_nano_v2
-    shield: kimiko_rev2_right
-  - board: nice_nano_v2
-    shield: kimiko_rev2_left
+    shield: settings_reset
+    
